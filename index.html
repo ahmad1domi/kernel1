@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kernel</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="background">
+    <div class="title">Kernel</div>
+
+    <div class="main-buttons">
+      <button class="btn" onclick="toggleSubMenu()">من نحن؟</button>
+    </div>
+
+    <div id="submenu" class="submenu" style="display: none;">
+      <button class="btn" onclick="showContent('who')">من نحن</button>
+      <button class="btn" onclick="showContent('what')">ماذا نقدم</button>
+      <button class="btn" onclick="showContent('goal')">ما الهدف</button>
+    </div>
+
+    <div id="content-area" class="content-area"></div>
+
+    <div class="prank-button">
+      <button class="btn danger" onclick="openPopup()">لا تضغط على هذا الزر</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

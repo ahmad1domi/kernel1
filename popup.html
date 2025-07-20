@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>😈 مفاجأة</title>
+  <style>
+    body {
+      background-color: black;
+      margin: 0;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      position: relative;
+    }
+
+    .msg {
+      position: absolute;
+      color: #00ffcc;
+      font-size: 20px;
+      animation: fadeInOut 3s ease-in-out forwards;
+    }
+
+    @keyframes fadeInOut {
+      0% { opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<script>
+  function createMessage() {
+    const msg = document.createElement("div");
+    msg.classList.add("msg");
+    msg.textContent = "انتظرونا...";
+
+    const x = Math.random() * window.innerWidth;
+    const y = Math.random() * window.innerHeight;
+
+    msg.style.left = `${x}px`;
+    msg.style.top = `${y}px`;
+
+    document.body.appendChild(msg);
+
+    setTimeout(() => {
+      msg.remove();
+    }, 3000);
+  }
+
+  setInterval(() => {
+    for (let i = 0; i < 10; i++) {
+      createMessage();
+    }
+  }, 500);
+</script>
+
+</body>
+</html>
